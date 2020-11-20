@@ -1,0 +1,260 @@
+/* background */
+
+body, html {
+    background: url(../img/calc.png),
+                url(../img/number.png),
+                linear-gradient(50deg, #004b1f, #08c293);
+    background-attachment: fixed;
+    height:100%;
+}
+
+/* Links */
+
+.linksMenu>ul>li>a {
+    color:#fff;
+}
+
+.linksMenu>ul>li>a:hover,
+#linkPrincipal>a:hover {
+    color:#08d33a;
+    text-shadow: 3px 3px 5px #08d33a;
+    transition: 0.6s;
+}
+
+a.linksEspeciais:hover {
+    text-decoration: none;
+}
+
+.divisor {
+    color: #fff;
+    font-size: 23px;
+    cursor: context-menu;
+}
+
+/* botões */
+
+.botoes {
+    border: 1px solid transparent;
+    display:block;
+    font-weight: 400;
+    text-align: center;
+    transition-duration: 0.5s;
+    height:38px;
+}
+
+.bt-azul {
+    background:#004b1f;
+    color:#fff;
+}
+
+.bt-azul:hover{
+    border:1px solid rgba(0, 192, 144, 0.671);
+    background:#08d33a;
+    color:#fff;
+}
+
+/* Paragrafos */
+
+h1, h4 {
+    color: #004b1f;
+    margin-bottom:0 ;
+}
+
+h4 {
+    margin-top:0;
+}
+
+h6 {
+    font-size: 9px;
+    color: #004b1f;
+}
+
+h1, h6, h5, h4{
+    padding: 10px;
+    margin: 0;
+}
+
+/* Bordas */
+
+div>input.azul {
+    border: 1px solid  #105516;
+    border-radius: 4px;
+}
+
+div>input.azul:hover {
+    box-shadow: 0 0 7.5px #08d33a!important;
+}
+
+.azulResult {
+    border:1px solid #004b1f ;
+    border-radius: 4px;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    height:35px;
+}
+
+/* Animação do subtitulo */
+
+#animarSubTitulo {
+    animation: pisca 0.5s 1s infinite alternate;
+    -webkit-animation: pisca 0.5s 1s infinite alternate;
+}
+@keyframes pisca {
+
+    from{
+         color:  #00ffd5;
+    }
+    to{
+         color: #004b1f;
+    }
+}
+
+/* media query */
+
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    
+    /* Paragrafo */
+    
+    h1{
+        text-align: center;
+    }
+
+    /* Estrutura do layout */
+
+    #cabecalhoXs{
+
+        position: fixed;
+        top: 160px;
+        border-top-right-radius: 10px ;
+        border-top-left-radius: 10px;
+        box-shadow: -5px 6px 5px #000;
+        padding-top:40px;
+        height: 175px;
+        border:1px solid #00ffd5;
+        border-bottom:none;
+        background-color: #004b1f;
+        background-image: url(../img/calc-white.png);
+    }
+
+    #titleXs {
+        max-height: 120px ;
+    }
+
+    #fundoInputC{
+
+        position: fixed;
+        top: 295px;
+        background:#fff;
+        padding:50px;
+        margin-top:10px;
+        display: block;
+        border:1px solid #00ffd5;
+        border-top:none;
+        border-bottom-right-radius: 5px ;
+        border-bottom-left-radius: 5px ;
+        box-shadow: -5px 5px 5px #000;
+    }
+
+    .autorXs{
+        position:absolute;
+        bottom:0;
+        right:0;
+    }
+
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 991.98px) { 
+    h1 {
+        font-size:2em;
+    }
+
+    #cabecalhoSm-md {
+
+        top: 120px;
+        background:#004b1f;
+        padding-top:40px;
+        border: 1px solid transparent;
+        border-right:none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        height:20em;
+        /* top: 95px;
+        box-shadow: 7px 5px 5px #000; */
+    }
+
+    #h6sm {
+        padding-top: 12.5em;
+    }
+
+    #h6md {
+        padding-top: 9em;
+    }
+    
+    #fundoInputB{
+
+        top: 120px;
+        background:#fff;
+        border:1px solid #00ffd5;
+        border-top-right-radius: 5px ;
+        border-bottom-right-radius: 5px ;
+        height:20em;
+       /* box-shadow: -5px 5px 5px #000;
+        top: 95px; */
+    } 
+
+    .containerForm {
+        
+        display: block;
+        padding: auto;
+        margin: auto;
+    }
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 992px) { 
+    h1 {
+        font-size:3em;
+    }
+
+    h5 {
+        font-size:1.2em;
+    }
+
+    #cabecalhoLg {
+
+        top: 120px;
+        background:#004b1f;
+        padding-top:40px;
+        border: 1px solid transparent;
+        border-right:none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        height:20em;
+        /* top: 95px;
+        box-shadow: 7px 5px 5px #000; */
+    }
+    
+    #fundoInputA{
+
+        top: 120px;
+        background:#fff;
+        border:1px solid #00ffd5;
+        border-top-right-radius: 5px ;
+        border-bottom-right-radius: 5px ;
+        height:20em;
+       /* box-shadow: -5px 5px 5px #000;
+        top: 95px; */
+    } 
+
+    .containerForm {
+        
+        display: block;
+        padding: auto;
+        margin: auto;
+    }
+ }

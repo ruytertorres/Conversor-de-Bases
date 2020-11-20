@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Conversor de Bases v1.0 by Ruytter Torres - 10/out/2020
+linkedin.com/ruytertorres-->
+<html lang="pt-br">
+
+     <head>
+          <meta charset="utf-8"> <!--Meta tag para permitir caracteres especias-->
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!--Meta tag de connfigurações do boootstrap-->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">          <link rel="stylesheet" type="text/css" href="css/style.css"></link> <!--Folha de estilo-->
+          <title>Conversor de Bases</title> <!--titulo-->
+
+     </head>
+     <body>
+          <section id="navabar">
+               <nav id="linkPrincipal" class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <a href="index.html" class="navbar-brand">conversorDeBases</a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse linksMenu" id="nav-target">
+                         <ul class="nav-bar nav ml-auto">
+                              <li class="nav-item"><a href=".html" class="nav-link">Binário</a></li>
+                              <li class="nav-item"><a href=".html" class="nav-link">Octal</a></li>
+                              <li class="nav-item"><a href=".html" class="nav-link">HexaDecimal</a></li>
+                              <li class="divisor d-none d-sm-block">|</li>
+                              <li class="nav-item"><a href="page2.html" class="nav-link">Tecnologia Empregada</a></li>
+                         </ul>
+                    </div>                          
+               </nav>
+          </section>
+          <section id="container"><!--MAIN-->
+               <section id="xsConfig" class="row justify-content-center align-items-center"> <!--SECTION XS CONFIG-->
+                    <div id="cabecalhoXs" class="col-11 d-sm-none"> <!--DIV CABECALHO XS-->
+                         <div id="titleXs">
+                              <h1 class="bg-white border rounded">Conversor de Bases</h1><!--titulo-->
+                         </div>
+                    </div> <!--//Fim do CABEÇALHO XS-->
+                    <div id="fundoInputC" class="col-11 input-group d-sm-none"><!--DIV INPUT XS-->
+                         <div class="d-none d-lg-block returnResult">
+                              <input type="text" id="infoC" class="col-12 azulResult" placeholder="Digite um Valor Decimal">
+                         </div>
+                         <div class=" my-4 d-none d-lg-block"><!--Inicio de ROW/ BUTTON com FUNCTION de calc A / Bloqueado de SM para cima-->
+                              <button onclick="calcularMediaC()" class="btn btn-success botoes bt-azul col-8 d-block m-auto" type="button" id="calc">Calcular</button> <!--Botão principal com FUNCTION de calc C-->
+                         </div>
+                         <div class="inp input-group d-none d-lg-flex">
+                              <input type="text" id="BinValueC" class="form-control" placeholder="Binário" disabled="disabled">
+                              <input type="text" id="OcValueC" class="form-control" placeholder="Octal" disabled="disabled">
+                              <input type="text" id="hxValueC" class="form-control" placeholder="Hexadecimal" disabled="disabled">
+                         </div>
+                    </div><!--//Fim de DIV INPUT XS-->
+                    <a class="linksEspeciais" href="page3.html"><h6 class="text-white autorXs d-sm-none ">By Ruyter Torres</h6> </a>  <!--autor exclusivo para XS-->                
+               </section><!--//XS CONFIG- fim-->
+               <section id="sm-msConfig" class=""><!-- SM/MD CONFIG -->
+                    <div id="configFlexSm-md" class="row mx-0 justify-content-center"> <!-- DIN INPUT SM/MD-->
+                         <div id="cabecalhoSm-md" class="float-left item col-4 d-none d-lg-none d-sm-block"><!--CABECALHO SM/MD-->
+                              <h1 class="bg-white border rounded">Conversor de Bases</h1><br><!--titulo-->
+                              <h5 id="animarSubTitulo" class="bg-white border rounded d-none d-md-block">Simples. Fácil. Rápido.</h5><!--subtitulo/ liberado de MD pra cima-->
+                              <a class="linksEspeciais" href="page3.html"><h6 id="h6sm" class="text-white autor d-none d-md-none d-sm-block">By Ruyter Torres</h6><!--autor--> </a>
+                              <a class="linksEspeciais" href="page3.html"><h6 id="h6md" class="text-white autor d-none d-sm-none d-lg-block">By Ruyter Torres</h6><!--autor--></a>
+                         </div><!--//Fim CABECALHO SM/MD-->
+                         <div id="fundoInputB" class="d-none d-sm-flex d-lg-none float-right col-7">
+                              <div class="d-none d-lg-block returnResult">
+                                   <input type="text" id="infoB" class="col-12 azulResult" placeholder="Digite um Valor Decimal">
+                              </div>
+                              <div class=" my-4 d-none d-lg-block"><!--Inicio de ROW/ BUTTON com FUNCTION de calc A / Bloqueado de SM para cima-->
+                                   <button onclick="calcularMediaB()" class="btn btn-success botoes bt-azul col-8 d-block m-auto" type="button" id="calc">Calcular</button> <!--Botão principal com FUNCTION de calc C-->
+                              </div>
+                              <div class="inp input-group d-none d-lg-flex">
+                                   <input type="text" id="BinValueB" class="form-control" placeholder="Binário" disabled="disabled">
+                                   <input type="text" id="OcValueB" class="form-control" placeholder="Octal" disabled="disabled">
+                                   <input type="text" id="hxValueB" class="form-control" placeholder="Hexadecimal" disabled="disabled">
+                              </div>
+                    </div> <!--//Fim DIV INPUT SM/MD-->
+               </section><!--//Fim de SM/MD Config -->
+               <section id="lgConfig" class=""><!-- LG CONFIG -->
+                    <div id="configFlexLg" class="row mx-0 justify-content-center"> <!-- DIN INPUT SM/MD-->
+                         <div id="cabecalhoLg" class="float-left item col-4 d-none d-lg-block"><!--CABECALHO SM/MD-->
+                              <div class="bg-white border rounded mb-2">
+                                   <h1>Conversor de Bases</h1><!--titulo-->
+                                   <h4>Decimal</h4><!--titulo-->
+                              </div>
+                              <div>
+                                   <h5 id="animarSubTitulo" class="bg-white border rounded d-none d-md-block">Simples. Fácil. Rápido.</h5><!--subtitulo/ liberado de MD pra cima-->
+                                   <a class="linksEspeciais" href="page3.html"><h6 class="text-white autor">By Ruyter Torres</h6><!--autor--></a>      
+                              </div>
+                         </div><!--//Fim CABECALHO LG-->
+                         <div id="fundoInputA" class="d-none d-lg-flex float-right col-7">
+                              <div class="containerForm">
+                                   <div class="d-none d-lg-block returnResult">
+                                        <input type="text" id="infoA" class="azul col-12 azulResult" placeholder="Digite um Valor Decimal">
+                                   </div>
+                                   <div class=" my-4 d-none d-lg-block"><!--Inicio de ROW/ BUTTON com FUNCTION de calc A / Bloqueado de SM para cima-->
+                                        <button onclick="calcularMediaA()" class="btn btn-success botoes bt-azul col-8 d-block m-auto" type="button" id="calc">Calcular</button> <!--Botão principal com FUNCTION de calc C-->
+                                   </div>
+                                   <div class="inp input-group d-none d-lg-flex">
+                                        <input type="text" id="BinValueA" class="form-control" placeholder="Binário" disabled="disabled">
+                                        <input type="text" id="OcValueA" class="form-control" placeholder="Octal" disabled="disabled">
+                                        <input type="text" id="hxValueA" class="form-control" placeholder="Hexadecimal" disabled="disabled">
+                                   </div>
+                              </div>
+                         </div>
+                    </div> <!--//Fim DIV INPUT LG-->
+               </section><!--//Fim de LG Config -->
+          </div><!--main fim-->
+          <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+          <script src="js/conversor.js"></script>
+          <!-- ===================================================================================================-->
+          <!-- Configurações do Bootstrap referente a JS -->
+          <!-- JavaScript (Opcional) -->
+          <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     </body>
+</html>
